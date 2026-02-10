@@ -1,14 +1,27 @@
-# Beehive / Ant Farm Mini Game
+# Beehive / Ant Farm — Living Generative Simulation
 
-A simple browser game where you manage a beehive and an ant farm at the same time.
+A contemplative browser-based ecosystem where bees and ants self-organize, forage, adapt, and clash in emergent swarm behavior.
 
 ## Run
 
-Open `index.html` in any modern browser.
+1. Open a terminal in this folder.
+2. Start a static server:
 
-## How to play
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
-- Each second, bees auto-produce honey and ants auto-collect crumbs.
-- Click action buttons for extra resources.
-- Spend 10 resources to hatch a new bee or ant and increase passive production.
-- Survive 60 seconds, then compare honey vs crumbs to see the winner.
+3. Open `http://127.0.0.1:8000` in your browser.
+
+You can also open `index.html` directly, but a local server is recommended.
+
+## Interaction
+
+- **Click**: drop food into the ecosystem.
+- **Right-click**: create a temporary danger zone that repels and stresses nearby swarms.
+
+## What to watch
+
+- Dynamic strategy shifts (scouting, defensive clustering, aggressive expansion, war waves).
+- Pheromone-like fading trails and soft additive glow rendering.
+- Procedural food ecology and a subtle day/night palette cycle.

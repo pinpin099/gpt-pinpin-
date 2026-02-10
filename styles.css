@@ -1,83 +1,57 @@
 :root {
   color-scheme: dark;
+  --overlay-bg: rgba(11, 12, 20, 0.45);
+  --overlay-border: rgba(255, 255, 255, 0.2);
+  --text: #f4f1ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #0a0b12;
+  color: var(--text);
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle at top, #2a2f4f, #15182a 60%);
-  color: #f8f7ff;
+#ecosystem {
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }
 
-.game-shell {
-  width: min(900px, 92vw);
-  background: rgba(12, 14, 23, 0.9);
-  border: 1px solid #40456d;
-  border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
-}
-
-h1,
-h2 {
-  margin: 0 0 0.6rem;
-}
-
-.subtitle {
-  margin-top: 0;
-  opacity: 0.85;
-}
-
-.hud {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 0.5rem;
-  background: #1f233c;
-  border: 1px solid #384074;
-  padding: 0.75rem;
-  border-radius: 10px;
-}
-
-.boards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.panel {
-  padding: 1rem;
+.overlay {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  max-width: min(420px, 92vw);
+  padding: 0.75rem 0.95rem;
   border-radius: 12px;
-  border: 1px solid #535b8f;
-  background: #232846;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--overlay-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
 }
 
-.panel button,
-#restart {
-  width: 100%;
-  margin-top: 0.6rem;
-  padding: 0.6rem 0.7rem;
-  border-radius: 8px;
-  border: 1px solid #8fa0ff;
-  background: #35418a;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+.overlay h1 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
 }
 
-.panel button:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
+.overlay p {
+  margin: 0.4rem 0 0;
+  font-size: 0.87rem;
+  line-height: 1.3;
 }
 
-.events {
-  margin-top: 1rem;
-  padding: 0.85rem;
-  background: #191d34;
-  border: 1px solid #353d73;
-  border-radius: 10px;
-  min-height: 90px;
+.hint {
+  opacity: 0.8;
 }
