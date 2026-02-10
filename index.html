@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beehive vs Ant Farm</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <h1>Beehive / Ant Farm</h1>
+      <p class="subtitle">Gather resources, grow your colony, and survive 60 seconds.</p>
+
+      <section class="hud">
+        <div><strong>Time:</strong> <span id="time">60</span>s</div>
+        <div><strong>Hive Honey:</strong> <span id="honey">0</span></div>
+        <div><strong>Hive Bees:</strong> <span id="bees">1</span></div>
+        <div><strong>Farm Crumbs:</strong> <span id="crumbs">0</span></div>
+        <div><strong>Farm Ants:</strong> <span id="ants">1</span></div>
+      </section>
+
+      <section class="boards">
+        <article class="panel hive">
+          <h2>🐝 Beehive</h2>
+          <button id="forage-nectar">Forage Nectar (+1 honey)</button>
+          <button id="hatch-bee">Hatch Bee (cost: 10 honey)</button>
+        </article>
+
+        <article class="panel farm">
+          <h2>🐜 Ant Farm</h2>
+          <button id="scout-crumb">Scout Crumb (+1 crumb)</button>
+          <button id="hatch-ant">Hatch Ant (cost: 10 crumbs)</button>
+        </article>
+      </section>
+
+      <section class="events">
+        <h2>Colony Events</h2>
+        <p id="event-log">The colonies are waking up...</p>
+      </section>
+
+      <button id="restart" hidden>Play Again</button>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
