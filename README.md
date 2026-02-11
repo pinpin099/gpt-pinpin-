@@ -1,37 +1,27 @@
-# Bees vs Ants — Living Painting Screensaver
+# Beehive / Ant Farm — Living Generative Simulation
 
-A pure HTML/CSS/JS generative artwork built with Canvas 2D.
-
-Two autonomous colonies (bees and ants) forage, adapt, and raid using pheromone fields and simple state-driven swarm behavior.
-
-## Files
-
-- `index.html`
-- `style.css`
-- `main.js`
-- `sim.js`
-- `fields.js`
+A contemplative browser-based ecosystem where bees and ants self-organize, forage, adapt, and clash in emergent swarm behavior.
 
 ## Run
 
-### Static host (GitHub Pages / Replit)
-Just open `index.html` as the site entrypoint.
-
-### Local
+1. Open a terminal in this folder.
+2. Start a static server:
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Then open `http://127.0.0.1:8000`.
+3. Open `http://127.0.0.1:8000` in your browser.
+
+You can also open `index.html` directly, but a local server is recommended.
+
+## Interaction
+
+- **Click**: drop food into the ecosystem.
+- **Right-click**: create a temporary danger zone that repels and stresses nearby swarms.
 
 ## What to watch
 
-- Continuous day/night mood cycle that changes colony behavior.
-- Pheromone painting: diffusion + evaporation trails.
-- Emergent raid waves and danger fronts around nests.
-- Rare swarm surges and long-interval poetic reset.
-
-## Optional debug
-
-Press `D` to toggle field debug overlay.
+- Dynamic strategy shifts (scouting, defensive clustering, aggressive expansion, war waves).
+- Pheromone-like fading trails and soft additive glow rendering.
+- Procedural food ecology and a subtle day/night palette cycle.

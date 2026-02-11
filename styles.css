@@ -1,33 +1,57 @@
 :root {
   color-scheme: dark;
+  --overlay-bg: rgba(11, 12, 20, 0.45);
+  --overlay-border: rgba(255, 255, 255, 0.2);
+  --text: #f4f1ff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
   overflow: hidden;
-  background: #07090f;
+  background: #0a0b12;
+  color: var(--text);
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 #ecosystem {
+  display: block;
   width: 100vw;
   height: 100vh;
-  display: block;
-  cursor: crosshair;
 }
 
-.signature {
+.overlay {
   position: fixed;
-  bottom: 0.85rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.72rem;
-  color: rgba(240, 240, 255, 0.45);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  top: 1rem;
+  left: 1rem;
+  max-width: min(420px, 92vw);
+  padding: 0.75rem 0.95rem;
+  border-radius: 12px;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--overlay-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   pointer-events: none;
-  user-select: none;
+}
+
+.overlay h1 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.overlay p {
+  margin: 0.4rem 0 0;
+  font-size: 0.87rem;
+  line-height: 1.3;
+}
+
+.hint {
+  opacity: 0.8;
 }
