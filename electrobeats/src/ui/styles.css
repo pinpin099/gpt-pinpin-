@@ -1,0 +1,19 @@
+/* ElectroBeats — global styles (Phase 5 polish) */
+/* Placeholder — full design applied in Phase 5. */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  text-align: center;
+  padding: 2rem;
+}
