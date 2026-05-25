@@ -1,7 +1,13 @@
-// ElectroBeats — entry point
-// Phase 0: blank page, no errors.
-// Subsequent phases will import audio/, ui/ modules here.
+// ElectroBeats — entry point (Phase 1)
 
 import './ui/styles.css';
+import { initTransport } from './audio/transport.js';
+import { renderControls } from './ui/controls.js';
 
-console.log('ElectroBeats loaded ✓');
+const app = document.getElementById('app');
+
+// 1. Wire up audio (transport configured, test beep ready)
+initTransport();
+
+// 2. Render UI
+renderControls(app);

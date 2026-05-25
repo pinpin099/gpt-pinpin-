@@ -1,19 +1,98 @@
-/* ElectroBeats — global styles (Phase 5 polish) */
-/* Placeholder — full design applied in Phase 5. */
+/* ElectroBeats — global styles (Phase 1 baseline; polished in Phase 5) */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --bg:       #0d0d0d;
+  --surface:  #1a1a2e;
+  --accent:   #e94560;
+  --text:     #e0e0e0;
+  --muted:    #666;
+  --radius:   8px;
+}
+
 body {
-  font-family: sans-serif;
-  background: #111;
-  color: #eee;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 #app {
-  text-align: center;
-  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Logo ── */
+.logo {
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Controls ── */
+.controls {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.transport-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ── Play button ── */
+.btn-play {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  min-width: 110px;
+}
+.btn-play:hover  { filter: brightness(1.15); }
+.btn-play:active { transform: scale(0.97); }
+.btn-play.active { background: #555; }
+
+/* ── BPM slider ── */
+.bpm-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.bpm-label input[type=range] {
+  accent-color: var(--accent);
+  width: 140px;
+  cursor: pointer;
+}
+#bpm-display {
+  font-weight: 700;
+  color: var(--text);
+  min-width: 2.5ch;
+}
+
+/* ── Hint ── */
+.hint {
+  font-size: 0.8rem;
+  color: var(--muted);
 }
